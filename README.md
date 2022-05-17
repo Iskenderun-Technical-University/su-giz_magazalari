@@ -1,0 +1,1 @@
+# su-giz_magazalari
