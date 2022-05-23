@@ -23,6 +23,8 @@ namespace su_giz_magazalari
             {
                 MessageBox.Show("Test");
                 MessageBox.Show("Test2");
+                Form2 f = new Form2();
+                f.Show();
             }
         }
     }
