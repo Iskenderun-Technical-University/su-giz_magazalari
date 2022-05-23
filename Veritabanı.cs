@@ -20,13 +20,9 @@ namespace su_giz_magazalari
 
 
         public static string SqlCon = @"Data Source=DESKTOP-KFDP1D2\SQLEXPRESS;Initial Catalog=Kırtasiye;Integrated Security=True";
-        // user ID=sa, password=xxxxx
 
         public static bool BaglantiDurum()
         {
-            // veritabani baglantisi kontrol
-
-
             using (con = new SqlConnection(SqlCon))
             {
                 try
