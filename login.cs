@@ -21,7 +21,7 @@ namespace su_giz_magazalari
         {
           
         }
-        public static string kullanicim;
+        public static string kullanicim="";
         private void button2_Click(object sender, EventArgs e)
         {
             if (VeriTabani.login(textBox1.Text, textBox2.Text))
