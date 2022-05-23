@@ -1,4 +1,4 @@
-![Proje Kapağı](https://github.com/Iskenderun-Technical-University/proje-onerisi-ymg_su-giz-magazalari/blob/main/image/%C5%9EU-G%C4%B0Z%20BUT%C4%B0K%20MA%C4%9EAZASI.png)
+![Proje Kapağı](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/ŞU-GİZ%20BUTİK%20MAĞAZASI.png)
 <br/>
 
 
@@ -8,7 +8,7 @@ birlikte işlerimizin bir tık daha zorlaşmasına sebep oldu. Bu nedenle online
 Amacımız tüketicinin istediği ürünlere en kolay ve hızlı yoldan ulaşmasını sağlamak. 
 
 # USE-CASE DIAGRAM : 
-![Diagram](https://github.com/Iskenderun-Technical-University/proje-onerisi-ymg_su-giz-magazalari/blob/main/image/Use%20case%20diagram.png)
+![Diagram](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/Use%20case%20diagram.png)
 
 # YAPILACAKLAR : <br/>
 Mağaza otomasyonu için veri tabanı oluşturulacak ve otomasyonun veri tabanı bağlantısı yapılacak.(Gizem AŞKAR(25.05.2022)) @gizemaskr7 <br/>
