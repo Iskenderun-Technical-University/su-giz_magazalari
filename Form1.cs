@@ -16,5 +16,13 @@ namespace su_giz_magazalari
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "cihan")
+            {
+                MessageBox.Show("Test");
+            }
+        }
     }
 }
