@@ -22,6 +22,7 @@ namespace su_giz_magazalari
             if (textBox1.Text == "cihan")
             {
                 MessageBox.Show("Test");
+                MessageBox.Show("Test2");
             }
         }
     }
