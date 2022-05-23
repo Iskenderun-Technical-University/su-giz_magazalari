@@ -1,4 +1,4 @@
-![Proje Kapağı]([https://github.com/Iskenderun-Technical-University/proje-onerisi-ymg_su-giz-magazalari/blob/main/image/%C5%9EU-G%C4%B0Z%20BUT%C4%B0K%20MA%C4%9EAZASI.png](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/ŞU-GİZ%20BUTİK%20MAĞAZASI.png))
+![Proje Kapağı](https://github.com/Iskenderun-Technical-University/proje-onerisi-ymg_su-giz-magazalari/blob/main/image/%C5%9EU-G%C4%B0Z%20BUT%C4%B0K%20MA%C4%9EAZASI.png)
 <br/>
 
 
