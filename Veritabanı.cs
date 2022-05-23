@@ -23,9 +23,6 @@ namespace su_giz_magazalari
 
         public static bool BaglantiDurum()
         {
-            // veritabani baglantisi kontrol
-
-
             using (con = new SqlConnection(SqlCon))
             {
                 try
