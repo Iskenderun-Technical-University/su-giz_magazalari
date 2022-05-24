@@ -40,9 +40,9 @@ namespace su_giz_magazalari
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox4.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox5.Text != "")
+            if (textBox4.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox5.Text != "" && comboBox2.Text != "" && maskedTextBox1.Text != "" && textBox7.Text != "") 
             {
-                string sorgu = "insert into urunler(urunAdi,kategori,renk,beden,fiyat)values('" + textBox4.Text + "','" + comboBox1.Text+ "','" + textBox2.Text + "','" + textBox5.Text + "','" + textBox3.Text + "')";
+                string sorgu = "insert into urunler(urunAdi,kategori,renk,beden,cinsiyet,barkod,fiyat)values('" + textBox4.Text + "','" + comboBox1.Text+ "','" + textBox2.Text + "','" + textBox5.Text + "','" + comboBox2.Text + "','" + maskedTextBox1.Text + "','" + textBox7.Text + "')";
                 VeriTabani.islemler(sorgu);
                 VeriTabani.GridD(dataGridView1, "select*from urunler");
             }
@@ -62,13 +62,28 @@ namespace su_giz_magazalari
             dataGridView1.Columns[2].HeaderText = "Kategori";
             dataGridView1.Columns[3].HeaderText = "Renk";
             dataGridView1.Columns[4].HeaderText = "Beden";
-            dataGridView1.Columns[5].HeaderText = "Fiyat";
+            dataGridView1.Columns[5].HeaderText = "Cinsiyet";
+            dataGridView1.Columns[6].HeaderText = "Barkod";
+            dataGridView1.Columns[7].HeaderText = "Fiyat";
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string sqlSorgu = "select * from urunler where filmAd like '%" + textBox1.Text + "%'";
+            string sqlSorgu = "select * from urunler where urunAdi like '%" + textBox1.Text + "%'";
             GridD(sqlSorgu);
+        }
+
+        private void şifreİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SifreIslemleri a = new SifreIslemleri();
+            a.ShowDialog();
+        }
+
+        private void kayıtİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KayitIslemleri a = new KayitIslemleri();
+            a.ShowDialog();
         }
     }
 }
