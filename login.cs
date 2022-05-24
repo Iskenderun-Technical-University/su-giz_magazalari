@@ -24,7 +24,7 @@ namespace su_giz_magazalari
                
                     MessageBox.Show("giris basarili");
                     kullanicim = textBox1.Text;
-                    YöneticIslemleri f = new YöneticIslemleri();
+                    PersonelIslemleri f = new PersonelIslemleri();
                     f.Show();
                     this.Hide();
             }
