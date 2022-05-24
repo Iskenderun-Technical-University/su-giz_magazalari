@@ -112,7 +112,7 @@ namespace su_giz_magazalari
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(187, 330);
+            this.label2.Location = new System.Drawing.Point(161, 330);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 19);
             this.label2.TabIndex = 13;
@@ -123,7 +123,7 @@ namespace su_giz_magazalari
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(133, 302);
+            this.label1.Location = new System.Drawing.Point(107, 302);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 19);
             this.label1.TabIndex = 12;
