@@ -16,12 +16,28 @@ namespace su_giz_magazalari
         {
             InitializeComponent();
         }
-        
+        public static string kullanicim = "";
         private void button1_Click(object sender, EventArgs e)
         {
-          
+            if (VeriTabani.login(textBox1.Text, textBox2.Text))
+            {
+               
+                    MessageBox.Show("giris basarili");
+                    kullanicim = textBox1.Text;
+                    YöneticIslemleri f = new YöneticIslemleri();
+                    f.Show();
+                    this.Hide();
+            }
+
+            else if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                MessageBox.Show("Kullanıcı adı ve şifre giriniz");
+            }
+            else
+                MessageBox.Show("kullanıcı adı veya şifre hatalı");
         }
-        public static string kullanicim="";
+    
+       
         private void button2_Click(object sender, EventArgs e)
         {
             if (VeriTabani.login(textBox1.Text, textBox2.Text))
