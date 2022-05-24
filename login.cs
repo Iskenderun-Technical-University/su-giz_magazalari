@@ -42,7 +42,7 @@ namespace su_giz_magazalari
         {
             if (VeriTabani.login(textBox1.Text, textBox2.Text))
             {
-                if (kullanicim == "gizem" || kullanicim == "şüşü")
+                if (textBox1.Text == "gizem" || textBox1.Text == "şüşü")
                 {
                     MessageBox.Show("giris basarili");
                     kullanicim = textBox1.Text;
