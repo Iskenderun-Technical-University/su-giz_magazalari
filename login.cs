@@ -26,12 +26,19 @@ namespace su_giz_magazalari
         {
             if (VeriTabani.login(textBox1.Text, textBox2.Text))
             {
-                MessageBox.Show("giris basarili");
-                kullanicim = textBox1.Text;
-                YöneticIslemleri f = new YöneticIslemleri();
-                f.Show();
-                this.Hide();
+                if (kullanicim == "gizem" || kullanicim == "şüşü")
+                {
+                    MessageBox.Show("giris basarili");
+                    kullanicim = textBox1.Text;
+                    YöneticIslemleri f = new YöneticIslemleri();
+                    f.Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("Giriş için yetkiniz yoktur.");
+
             }
+            
             else if (textBox1.Text == "" || textBox2.Text == "")
             {
                 MessageBox.Show("Kullanıcı adı ve şifre giriniz");
