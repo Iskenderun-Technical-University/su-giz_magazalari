@@ -49,8 +49,8 @@ namespace su_giz_magazalari
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -254,6 +254,14 @@ namespace su_giz_magazalari
             this.panel2.Size = new System.Drawing.Size(200, 108);
             this.panel2.TabIndex = 74;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(36, 53);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(126, 22);
+            this.textBox3.TabIndex = 1;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -263,14 +271,6 @@ namespace su_giz_magazalari
             this.label2.Size = new System.Drawing.Size(85, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ürün Ara :";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(36, 53);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(126, 22);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // radioButton3
             // 

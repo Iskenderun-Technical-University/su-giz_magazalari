@@ -40,11 +40,17 @@ namespace su_giz_magazalari
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            string sorgu2 = "select * from urunler where barkod='" + maskedTextBox1.Text + "'";
             if (textBox4.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox5.Text != "" && comboBox2.Text != "" && maskedTextBox1.Text != "" && textBox7.Text != "") 
             {
-                string sorgu = "insert into urunler(urunAdi,kategori,renk,beden,cinsiyet,barkod,fiyat)values('" + textBox4.Text + "','" + comboBox1.Text+ "','" + textBox2.Text + "','" + textBox5.Text + "','" + comboBox2.Text + "','" + maskedTextBox1.Text + "','" + textBox7.Text + "')";
-                VeriTabani.islemler(sorgu);
-                VeriTabani.GridD(dataGridView1, "select*from urunler");
+                if (VeriTabani.kullanici_kontrol(sorgu2) == false)
+                {
+                    string sorgu = "insert into urunler(urunAdi,kategori,renk,beden,cinsiyet,barkod,fiyat)values('" + textBox4.Text + "','" + comboBox1.Text + "','" + textBox2.Text + "','" + textBox5.Text + "','" + comboBox2.Text + "','" + maskedTextBox1.Text + "','" + textBox7.Text + "')";
+                    VeriTabani.islemler(sorgu);
+                    VeriTabani.GridD(dataGridView1, "select*from urunler");
+                }
+                else
+                    MessageBox.Show("Eklemek istediğiniz ürün zaten eklidir.");
             }
             else
             {

@@ -19,8 +19,6 @@ namespace su_giz_magazalari
         }
         SqlConnection con;
         SqlDataAdapter da;
-        SqlCommand cmd;
-        SqlDataReader dr;
         DataSet ds;
         public static string baglanti = @"Data Source = localhost\SQLEXPRESS;Initial Catalog = su-giz-magazalari; Integrated Security = True";
         public string sqlSorgu;
@@ -36,42 +34,50 @@ namespace su_giz_magazalari
             da = new SqlDataAdapter(sorgu, con);
             ds = new DataSet();
             con.Open();
-            da.Fill(ds, "urunler");
-            dataGridView1.DataSource = ds.Tables["urunler"];
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
             con.Close();
 
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
-            {
-                
-                sqlSorgu = "select * from urunler where urunAdi like '%" + textBox1.Text + "%'";
-                GridD(sqlSorgu);
+            if (textBox3.Text != "")
+             {
+                if (radioButton1.Checked)
+                {
+
+                    sqlSorgu = "select * from urunler where urunAdi like '%" + textBox3.Text + "%'";
+                    GridD(sqlSorgu);
+                }
+                else if (radioButton2.Checked)
+                {
+
+                    sqlSorgu = "select * from urunler where kategori like '%" + textBox3.Text + "%'";
+                    GridD(sqlSorgu);
+                }
+                else if (radioButton3.Checked)
+                {
+
+                    sqlSorgu = "select * from urunler where renk like '%" + textBox3.Text + "%'";
+                    GridD(sqlSorgu);
+                }
+                else if (radioButton4.Checked)
+                {
+
+                    sqlSorgu = "select * from urunler where beden like '%" + textBox3.Text + "%'";
+                    GridD(sqlSorgu);
+                }
+                else if (radioButton5.Checked)
+                {
+
+                    sqlSorgu = "select * from urunler where cinsiyet like '%" + textBox3.Text + "%'";
+                    GridD(sqlSorgu);
+                } 
             }
-            else if (radioButton2.Checked)
+            else
             {
-                
-                sqlSorgu = "select * from urunler where kategori like '%" + textBox1.Text + "%'";
-                GridD(sqlSorgu);
-            }
-            else if (radioButton3.Checked)
-            {
-                
-                sqlSorgu = "select * from urunler where renk like '%" + textBox1.Text + "%'";
-                GridD(sqlSorgu);
-            }
-            else if (radioButton4.Checked)
-            {
-                
-                sqlSorgu = "select * from urunler where beden like '%" + textBox1.Text + "%'";
-                GridD(sqlSorgu);
-            }
-            else if (radioButton5.Checked)
-            {
-                
-                sqlSorgu = "select * from urunler where cinsiyet like '%" + textBox1.Text + "%'";
+                sqlSorgu = "select * from urunler";
                 GridD(sqlSorgu);
             }
 
@@ -88,7 +94,7 @@ namespace su_giz_magazalari
             dataGridView1.Columns[5].HeaderText = "Cinsiyet";
             dataGridView1.Columns[6].HeaderText = "Barkod";
             dataGridView1.Columns[7].HeaderText = "Fiyat";
-            dataGridView1.Columns[8].HeaderText= "Adet";
+           
 
         }
 
@@ -101,13 +107,26 @@ namespace su_giz_magazalari
             comboBox3.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             maskedTextBox2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBox7.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            comboBox1.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+
+         
 
 
         }
-
+        double para = 0;
         private void button3_Click(object sender, EventArgs e)
         {
+            para = Convert.ToDouble(textBox7.Text); 
+            if (textBox1.Text != "" && comboBox4.Text != "" && textBox2.Text != "" && textBox5.Text != "" && comboBox3.Text != "" && maskedTextBox2.Text != "" && textBox7.Text != "" && comboBox1.Text != "")
+            { 
+                
+             
+                    string sorgu = "insert into satis (urunAdi,kategori,renk,beden,cinsiyet,barkod,fiyat,adet)values('" + textBox1.Text + "','" + comboBox4.Text + "','" + textBox2.Text + "','" + textBox5.Text + "','" + comboBox3.Text + "','" + maskedTextBox2.Text + "','" + para.ToString()+ "','" + comboBox1.Text + "')";
+                    VeriTabani.islemler(sorgu);
+            }
+            else
+            {
+                MessageBox.Show("Boşlukları doldurduğunuzdan emin olunuz.");
+            }
 
         }
     }

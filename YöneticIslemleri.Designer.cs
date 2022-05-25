@@ -71,6 +71,20 @@ namespace su_giz_magazalari
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "T-Shirt",
+            "Eşofman",
+            "Şort",
+            "Elbise",
+            "Pantolon",
+            "Jean",
+            "Gömlek",
+            "Bluz",
+            "Kazak",
+            "Pijama",
+            "Dış Giyim",
+            "Aksesuar",
+            "Ayakkabı"});
             this.comboBox1.Location = new System.Drawing.Point(442, 92);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
@@ -131,7 +145,7 @@ namespace su_giz_magazalari
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 422);
+            this.panel1.Size = new System.Drawing.Size(247, 443);
             this.panel1.TabIndex = 45;
             // 
             // textBox1
@@ -159,7 +173,7 @@ namespace su_giz_magazalari
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(247, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(247, 343);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox2
@@ -256,14 +270,14 @@ namespace su_giz_magazalari
             // şifreİşlemleriToolStripMenuItem
             // 
             this.şifreİşlemleriToolStripMenuItem.Name = "şifreİşlemleriToolStripMenuItem";
-            this.şifreİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.şifreİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.şifreİşlemleriToolStripMenuItem.Text = "Şifre İşlemleri";
             this.şifreİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.şifreİşlemleriToolStripMenuItem_Click);
             // 
             // kayıtİşlemleriToolStripMenuItem
             // 
             this.kayıtİşlemleriToolStripMenuItem.Name = "kayıtİşlemleriToolStripMenuItem";
-            this.kayıtİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kayıtİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.kayıtİşlemleriToolStripMenuItem.Text = "Kayıt İşlemleri";
             this.kayıtİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.kayıtİşlemleriToolStripMenuItem_Click);
             // 
@@ -271,7 +285,7 @@ namespace su_giz_magazalari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 450);
+            this.ClientSize = new System.Drawing.Size(675, 471);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.textBox7);
