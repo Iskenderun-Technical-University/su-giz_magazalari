@@ -18,4 +18,4 @@ Otomasyonun login tasarımı yapılacak.(Şüheda GÜNDÜZ) @suheda-gndz <br/>
 ![Class Diagram](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/Class%20Diagram.png)
 
 # LOGIN EKRANI : 
-![Login](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/Login%20Ekran%C4%B1.png)
+![Login](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/loginekran%C4%B1.png)
