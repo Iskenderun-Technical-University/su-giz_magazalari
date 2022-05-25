@@ -33,7 +33,7 @@ namespace su_giz_magazalari
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string sorgu = "update yöneticigiris set sifre='" + textBox2.Text + "'where kullaniciAdi='" + textBox1.Text + "'";
+            string sorgu = "update yöneticigiris set sifre='" + VeriTabani.MD5Sifrele(textBox2.Text) + "'where kullaniciAdi='" + textBox1.Text + "'";
             VeriTabani.islemler(sorgu);
             VeriTabani.GridD(dataGridView1, "select*from yöneticigiris");
         }
@@ -42,7 +42,7 @@ namespace su_giz_magazalari
         {
            
             
-                string sorgu = "delete from yöneticigiris where kullaniciAdi='" + textBox1.Text + "' and sifre='" + textBox2.Text + "'";
+                string sorgu = "delete from yöneticigiris where kullaniciAdi='" + textBox1.Text + "' and sifre='" + VeriTabani.MD5Sifrele(textBox2.Text) + "'";
                 VeriTabani.islemler(sorgu);
                 VeriTabani.GridD(dataGridView1, "select *from yöneticigiris");
             
@@ -66,7 +66,7 @@ namespace su_giz_magazalari
                     }
                     else
                     {
-                        string sorgu = "insert into yöneticigiris (kullaniciAdi,sifre)values('" + textBox1.Text + "','" + textBox2.Text + "')";
+                        string sorgu = "insert into yöneticigiris (kullaniciAdi,sifre)values('" + textBox1.Text + "','" + VeriTabani.MD5Sifrele(textBox2.Text) + "')";
                         VeriTabani.islemler(sorgu);
                         VeriTabani.GridD(dataGridView1, "select*from yöneticigiris");
                     }

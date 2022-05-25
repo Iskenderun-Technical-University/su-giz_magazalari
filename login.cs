@@ -19,7 +19,7 @@ namespace su_giz_magazalari
         public static string kullanicim = "";
         private void button1_Click(object sender, EventArgs e)
         {
-            if (VeriTabani.login(textBox1.Text, textBox2.Text))
+            if (VeriTabani.login(textBox1.Text, VeriTabani.MD5Sifrele(textBox2.Text)))
             {
                
                     MessageBox.Show("giris basarili");
@@ -40,7 +40,7 @@ namespace su_giz_magazalari
        
         private void button2_Click(object sender, EventArgs e)
         {
-            if (VeriTabani.login(textBox1.Text, textBox2.Text))
+            if (VeriTabani.login(textBox1.Text, VeriTabani.MD5Sifrele(textBox2.Text)))
             {
                 if (textBox1.Text == "gizem" || textBox1.Text == "şüşü")
                 {
