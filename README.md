@@ -15,7 +15,7 @@ Mağaza otomasyonu için veri tabanı oluşturulacak ve otomasyonun veri tabanı
 Otomasyonun login tasarımı yapılacak.(Şüheda GÜNDÜZ) @suheda-gndz <br/>
 
 # CLASS DIAGRAM : 
-![Class Diagram](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/Class%20Diagramı.png)
+![Class Diagram](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/Class%20diagramı.png)
 
 # LOGIN EKRANI : 
 ![Login](https://github.com/Iskenderun-Technical-University/su-giz_magazalari/blob/master/image/loginekran%C4%B1.png)
